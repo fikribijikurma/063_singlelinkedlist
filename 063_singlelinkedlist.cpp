@@ -75,7 +75,7 @@ bool serachNode(int nim, Node* current, Node* previous) {
 bool deleteNode(int nim) {
 	Node* current = START;
 	Node* previous = START;
-	if (searchNode(nim, previous, current) == false)
+	if (serachNode(nim, previous, current) == false)
 		return false;
 	previous->next = current->next;
 	if (current == START)
@@ -108,6 +108,34 @@ void traverse() {
 }
 void searchData() {
 	if (listEmpty()) {
-		cout << "List Kosong" << endl
+		cout << "List Kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	else {
+		int nim;
+		cout << "Masukan NIM: ";
+		cin >> nim;
+		Node* currentNode = START;
+		while (currentNode != NULL) {
+			if (currentNode->noMhs == nim) {
+				cout << "NIM: " << currentNode->noMhs << ", Nama" << currentNode->name << endl;
+				return;
+			}
+			currentNode = currentNode->next;
+		}
+		cout << "Data tidak detemukan" << endl;
+	}
+}
+
+int main() {
+	int pilihan;
+	do
+	{
+		try 
+		{
+
+		}
 	}
 }
