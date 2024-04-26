@@ -5,5 +5,13 @@ struct Node {
 	int noMhs;
 	string name;
 	Node* next;
-
 };
+
+Node* START = NULL;
+
+void addNode() {
+	int nim;
+	string nama;
+	Node* nodeBaru = new Node();
+	cout << ""
+}
